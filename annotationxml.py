@@ -1,8 +1,9 @@
 
 import xmlschema
 import logging
+from annotation import Annotation
 
-class AnnotationXML(object):
+class AnnotationXML(Annotation):
     """
     This class is meant to support Annotation formats in XML only
     New annotation types should inherit this class and implement the data travering of the dictionary

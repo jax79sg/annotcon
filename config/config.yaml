@@ -2,10 +2,10 @@
 supportedtypes:
         - name: pascalvoc
           format: xml
-          use: image
+          use: imagedetectclassify
         - name: vatic
           format: xml
-          use: image
+          use: imagedetectclassify
 
 schemas:
     location: schemas
