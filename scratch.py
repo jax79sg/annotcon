@@ -1,10 +1,12 @@
+## Usage example
+import logging
+
 from config import Config
-from annotationobject import Validator
-
-pascalvocvalidator=  Validator('schemas/pascalvoc.xsd')
-vaticvalidator= Validator('schemas/vatic.xsd')
-
-print(pascalvocvalidator.isValid('samples/pascalvoc.xml'))
-print(pascalvocvalidator.isValid('samples/vatic.xml'))
-
+from annotationloader import AnnotationLoader
+logging.basicConfig(format='%(asctime)s %(message)s',level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 myconfig=Config()
+pascalAnnotator = AnnotationLoader().loadAnnotator('pascalvoc',myconfig)
+vaticAnnotator = AnnotationLoader().loadAnnotator('vatic',myconfig)
+logger.debug(pascalAnnotator)
+logger.debug(vaticAnnotator)

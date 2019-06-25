@@ -1,10 +1,11 @@
 
-supported:
-    - pascalvoc
-    - vatic
-schemalocation:
-    preprocessing_queue:
-        - preprocessing.scale_and_center
-        - preprocessing.dot_reduction
-        - preprocessing.connect_lines
-    use_anonymous: yes
+supportedtypes:
+        - name: pascalvoc
+          format: xml
+          use: image
+        - name: vatic
+          format: xml
+          use: image
+
+schemas:
+    location: schemas
